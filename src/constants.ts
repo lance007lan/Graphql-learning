@@ -1,0 +1,1 @@
+export const ___prod___ = process.env.ENV === 'production';
