@@ -7,8 +7,6 @@ import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
 import { HelloResolver } from "./resolvers/hello";
 import { PostResolver } from "./resolvers/Post";
-import { Post } from "./entities/Post";
-import { randomInt } from "crypto";
 
 const main = async () => {
     const orm = await MikroORM.init(mikroOrmConfig);
