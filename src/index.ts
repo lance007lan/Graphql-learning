@@ -34,10 +34,13 @@ const main = async () => {
 
     await appolloServer.start();
 
-    appolloServer.applyMiddleware({ app })
+    appolloServer.applyMiddleware({ app, cors: {
+        origin: "https://studio.apollographql.com",
+        credentials: true
+    } })
     
     app.listen(3000, () => {
-        console.log('server started on localhost:4000');
+        console.log('server started on localhost:3000');
     })
 }
 
